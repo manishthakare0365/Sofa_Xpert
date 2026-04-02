@@ -448,17 +448,17 @@
       </div>
     </div>
 
-    <div class="cf rv">
+    <form class="cf rv" id="contactForm" onsubmit="sendToWhatsApp(event)">
       <h3>Request a Quote</h3>
       <p>Tell us about your project and we'll respond within hours.</p>
       <div class="frow">
-        <div class="fg"><label>Your Name</label><input type="text" placeholder="Your full name"/></div>
-        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+91 98765 43210"/></div>
+        <div class="fg"><label for="cf-name">Your Name</label><input id="cf-name" type="text" placeholder="Your full name" required/></div>
+        <div class="fg"><label for="cf-phone">Phone / WhatsApp</label><input id="cf-phone" type="tel" placeholder="+91 98765 43210" required/></div>
       </div>
-      <div class="fg"><label>Email Address</label><input type="email" placeholder="you@email.com"/></div>
+      <div class="fg"><label for="cf-email">Email Address</label><input id="cf-email" type="email" placeholder="you@email.com"/></div>
       <div class="fg">
-        <label>Service Required</label>
-        <select>
+        <label for="cf-service">Service Required</label>
+        <select id="cf-service" required>
           <option value="">Select a service...</option>
           <optgroup label="Repair Services">
             <option>Sofa Repair (At Home / Doorstep)</option>
@@ -490,10 +490,10 @@
           </optgroup>
         </select>
       </div>
-      <div class="fg"><label>Tell Us More</label><textarea placeholder="Describe your furniture, dimensions, preferred materials, or anything else..."></textarea></div>
-      <a href="https://wa.me/919355655110" target="_blank" class="btn btn-dark" style="width:100%;margin-top:.4rem"><span>Send via WhatsApp ↗</span></a>
+      <div class="fg"><label for="cf-msg">Tell Us More</label><textarea id="cf-msg" placeholder="Describe your furniture, dimensions, preferred materials, or anything else..."></textarea></div>
+      <button type="submit" class="btn btn-dark" style="width:100%;margin-top:.4rem"><span>Send via WhatsApp ↗</span></button>
       <p class="cf-note">Or email us at sofaxpert@gmail.com</p>
-    </div>
+    </form>
   </div>
 </section>
 

@@ -1,3 +1,23 @@
+// Contact form → WhatsApp
+function sendToWhatsApp(e) {
+  e.preventDefault();
+  const name    = document.getElementById('cf-name').value.trim();
+  const phone   = document.getElementById('cf-phone').value.trim();
+  const email   = document.getElementById('cf-email').value.trim();
+  const service = document.getElementById('cf-service').value;
+  const msg     = document.getElementById('cf-msg').value.trim();
+
+  const text =
+    `Hello Sofa Xpert! 👋\n\n` +
+    `*Name:* ${name}\n` +
+    `*Phone:* ${phone}\n` +
+    (email ? `*Email:* ${email}\n` : '') +
+    `*Service Required:* ${service}\n` +
+    (msg ? `*Details:* ${msg}` : '');
+
+  window.open('https://wa.me/919355655110?text=' + encodeURIComponent(text), '_blank');
+}
+
 // Nav scroll
   const nav=document.getElementById('nav');
   window.addEventListener('scroll',()=>nav.classList.toggle('solid',window.scrollY>60));
